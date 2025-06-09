@@ -1,0 +1,206 @@
+body {
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #f7f9fb 0%, #e3eefe 100%);
+    color: #22223B;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(79, 140, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: #4F8CFF;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: #22223B;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #4F8CFF;
+}
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4F8CFF;
+    transition: width .3s;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    background: linear-gradient(120deg, #4F8CFF 0%, #FFB347 100%);
+    color: #fff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.hero-content .highlight {
+    color: #FFB347;
+}
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.btn {
+    background: #FFB347;
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255, 179, 71, 0.15);
+    transition: background 0.2s, transform 0.2s;
+}
+.btn:hover {
+    background: #4F8CFF;
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.section {
+    padding: 60px 0;
+    background: #fff;
+    margin-bottom: 24px;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(79, 140, 255, 0.07);
+    width: 90%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title h2 {
+    color: #4F8CFF;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.skills-container, .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.skill-card, .project-card {
+    background: #f7f9fb;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(79, 140, 255, 0.08);
+    padding: 28px 22px;
+    min-width: 220px;
+    max-width: 320px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(79, 140, 255, 0.18);
+}
+
+.skill-card h3, .project-card h3 {
+    color: #4F8CFF;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #22223B;
+    font-size: 1rem;
+}
+
+.contact-form {
+    background: #f7f9fb;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(79, 140, 255, 0.08);
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.form-control:focus {
+    border-color: #4F8CFF;
+    outline: none;
+}
+
+.footer {
+    background: #4F8CFF;
+    color: #fff;
+    padding: 24px 0 12px 0;
+    text-align: center;
+    border-radius: 18px 18px 0 0;
+    margin-top: 40px;
+}
+.footer-content p, .footer-content .contact-info p {
+    margin: 0 0 8px 0;
+}
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.4rem;
+    transition: color 0.2s;
+}
+.social-links a:hover {
+    color: #FFB347;
+}
+
+@media (max-width: 800px) {
+    .skills-container, .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        width: 98%;
+        padding: 30px 0;
+    }
+}
+
+/* Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.fade-in {
+    opacity: 1;
+    transform: none;
+} 
